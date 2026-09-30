@@ -1,0 +1,372 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tanishq Sharma · Software Engineer</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;1,6..72,400&amp;family=Geist:wght@400;500;600&amp;family=Geist+Mono:wght@400;500&amp;display=swap">
+<style>
+body{margin:0;background:#F7F6F2}
+a{color:#1A1A18;text-decoration:none}
+a:hover{color:#2F5D50}
+.wrap{max-width:720px;margin:0 auto;padding:0 24px;box-sizing:border-box}
+.g2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.navlinks{display:flex;gap:22px}
+.sprite{background-image:url(assets/tanishq-sprites.webp);background-size:600% 600%;background-repeat:no-repeat;transition:transform .2s ease}
+.avatar-btn{cursor:pointer}
+.avatar-btn:hover .sprite{transform:translateY(-3px) rotate(-2deg)}
+.avatar-btn:focus-visible{outline:2px solid #2F5D50;outline-offset:4px}
+.peek{transition:transform .35s ease}
+.cta:hover .peek{transform:translateX(-18px)}
+@media (max-width:640px){
+.g2{grid-template-columns:minmax(0,1fr)}
+.navlinks{display:none}
+.hero{flex-direction:column !important;align-items:flex-start !important}
+.hero-name{font-size:52px !important}
+.role{flex-direction:column;align-items:flex-start !important;gap:4px !important}
+.peek{display:none}
+}
+</style>
+</head>
+<body>
+<div style="min-height: 100vh; background: #F7F6F2; color: #1A1A18; font-family: 'Geist', ui-sans-serif, system-ui, sans-serif; font-size: 16px; line-height: 1.6">
+
+<!-- NAV -->
+<header style="position: sticky; top: 0; z-index: 5; background: rgba(247,246,242,0.92); backdrop-filter: blur(8px); border-bottom: 1px solid #E6E4DD">
+<nav class="wrap" style="display: flex; align-items: center; justify-content: space-between; height: 64px">
+<a href="#top" style="font-family: 'Newsreader', Georgia, serif; font-size: 22px; font-style: italic">ts.</a>
+<div class="navlinks" style="font-size: 14px">
+<a href="#writings" style="color: #5F5E58">Writings</a>
+<a href="#builds" style="color: #5F5E58">Builds</a>
+<a href="#talks" style="color: #5F5E58">Talks</a>
+<a href="#experience" style="color: #5F5E58">Experiences</a>
+<a href="#bookshelf" style="color: #5F5E58">Bookshelf</a>
+</div>
+<a href="mailto:sxtanishq@gmail.com" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border-radius: 999px; background: #1A1A18; color: #F7F6F2; font-size: 14px; font-weight: 500">Work with me</a>
+</nav>
+</header>
+
+<main id="top">
+
+<!-- HERO -->
+<section class="wrap" style="padding-top: 88px; padding-bottom: 40px">
+<div class="hero" style="display: flex; align-items: center; gap: 28px">
+<button class="avatar-btn" type="button" aria-label="Tap to change Tanishq's expression" title="Tap me" id="avatar" style="flex-shrink: 0; width: 128px; height: 160px; padding: 0; border: none; background: transparent">
+<div class="sprite" style="width: 128px; height: 160px; background-position: 0% 0%" id="face"></div>
+</button>
+<div style="display: flex; flex-direction: column; gap: 6px">
+<h1 class="hero-name" style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 68px; line-height: 1; letter-spacing: -0.025em">tanishq</h1>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 14px; color: #5F5E58">/ Tanishq Sharma / <em style="font-family: 'Newsreader', Georgia, serif; font-size: 16px">noun</em></span>
+<p style="margin: 6px 0 0; font-family: 'Newsreader', Georgia, serif; font-style: italic; font-size: 22px; line-height: 1.35; color: #3D3C38">Full stack engineer who keeps production boring. Integration-heavy by trade, curious about AI agents by habit.</p>
+</div>
+</div>
+</section>
+
+<!-- EMPLOYMENT -->
+<section class="wrap" style="padding-top: 24px; padding-bottom: 40px">
+<div style="display: flex; flex-direction: column; border-top: 1px solid #E6E4DD">
+
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 20px 0; border-bottom: 1px solid #E6E4DD">
+<div class="role" style="display: flex; align-items: center; justify-content: space-between; gap: 16px">
+<div style="display: flex; align-items: center; gap: 14px">
+<div style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 9px; background: #1A1A18; color: #F7F6F2; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px">S</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-weight: 500">Skillnet Solutions, USA</span>
+<span style="font-size: 14px; color: #5F5E58">Senior Full Stack Engineer</span>
+</div>
+</div>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">Jan 2023 – Present · 3 yrs 10 mos</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 4px; margin-left: 50px; padding-left: 14px; border-left: 1px dashed #D3D1C8; font-size: 14px; color: #5F5E58">
+<span><span style="color: #1A1A18">Wilco</span> · search and in-store kiosks</span>
+<span><span style="color: #1A1A18">Fleet Farm</span> · checkout and order notifications</span>
+</div>
+</div>
+
+<div class="role" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; border-bottom: 1px solid #E6E4DD">
+<div style="display: flex; align-items: center; gap: 14px">
+<div style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 9px; background: #E3E8E2; color: #2F5D50; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px">M</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-weight: 500">Maharshi Tech Solutions</span>
+<span style="font-size: 14px; color: #5F5E58">Software Engineer</span>
+</div>
+</div>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">Jan 2022 – Dec 2022 · 1 yr</span>
+</div>
+
+<div class="role" style="display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 20px 0; border-bottom: 1px solid #E6E4DD">
+<div style="display: flex; align-items: center; gap: 14px">
+<div style="width: 36px; height: 36px; flex-shrink: 0; border-radius: 9px; background: #ECE7DC; color: #6B5A3A; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 14px">D</div>
+<div style="display: flex; flex-direction: column">
+<span style="font-weight: 500">DMI, India</span>
+<span style="font-size: 14px; color: #5F5E58">Software Engineer</span>
+</div>
+</div>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">Jan 2021 – Dec 2021 · 1 yr</span>
+</div>
+</div>
+</section>
+
+<!-- INTERESTS -->
+<section class="wrap" style="padding-top: 16px; padding-bottom: 40px">
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 6px; color: #3D3C38">
+<li><span style="color: #5F5E58">On repeat:</span> [YOUR SONG]</li>
+<li><span style="color: #5F5E58">Solving:</span> flaky integrations, mostly at 2am</li>
+<li><span style="color: #5F5E58">Building:</span> AI agents that recover when upstreams fail</li>
+<li><span style="color: #5F5E58">Reading:</span> [YOUR BOOK]</li>
+<li><span style="color: #5F5E58">Weekends:</span> [WHAT YOU DO OFFLINE]</li>
+<li><span style="color: #5F5E58">Next stop:</span> Dublin, Ireland (open to relocating)</li>
+</ul>
+</section>
+
+<!-- SOCIAL ROW -->
+<section class="wrap" style="padding-bottom: 56px">
+<div style="display: flex; flex-wrap: wrap; gap: 10px; font-size: 14px">
+<a href="https://github.com/SharmaTanishq" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #DAD8D0; border-radius: 999px; background: #FFFFFF">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6a4.6 4.6 0 0 0-1.3-3.2 4.2 4.2 0 0 0-.1-3.2s-1.1-.3-3.5 1.3a12.3 12.3 0 0 0-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1a4.2 4.2 0 0 0-.1 3.2A4.6 4.6 0 0 0 4 9.5c0 4.6 2.7 5.7 5.5 6-.6.6-.6 1.2-.5 2V21"></path></svg>GitHub</a>
+<a href="https://linkedin.com/in/tanishqxsharma" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #DAD8D0; border-radius: 999px; background: #FFFFFF">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-4 0v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>LinkedIn</a>
+<a href="https://bridgeflow.app" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #DAD8D0; border-radius: 999px; background: #FFFFFF">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 17h18M6 17V9m12 8V9M3 9c3 0 6-4 9-4s6 4 9 4"></path></svg>Bridgeflow</a>
+<a href="mailto:sxtanishq@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 16px; border: 1px solid #DAD8D0; border-radius: 999px; background: #FFFFFF">
+<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="m3 7 9 6 9-6"></path></svg>Email</a>
+</div>
+</section>
+
+<!-- CONTRIBUTIONS -->
+<section class="wrap" style="padding-top: 16px; padding-bottom: 56px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-bottom: 16px">
+<h2 style="margin: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Contributions</h2>
+<div style="display: flex; gap: 4px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px">
+<span id="years" style="display: contents"></span>
+</div>
+</div>
+<div style="position: relative; padding: 16px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 14px; overflow: hidden">
+<div style="display: grid; grid-template-rows: repeat(7, 9px); grid-auto-flow: column; grid-auto-columns: 9px; gap: 3px; justify-content: center" id="grid">
+
+</div>
+<div style="position: absolute; inset: 0; display: flex; align-items: center; justify-content: center">
+<span style="padding: 6px 12px; border-radius: 8px; background: #FFFFFF; border: 1px dashed #C9C7BF; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[GITHUB CONTRIBUTIONS FOR <span id="yr">2026</span>: WIRE TO REAL DATA]</span>
+</div>
+</div>
+</section>
+
+<!-- EXPERIENCES -->
+<section id="experience" class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 24px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Experiences</h2>
+
+<div class="g2" style="margin-bottom: 40px">
+<div style="padding: 22px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 16px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Newsreader', Georgia, serif; font-size: 40px; line-height: 1; color: #2F5D50">70%</span>
+<span style="font-weight: 500">Faster kiosk search</span>
+<span style="font-size: 14px; color: #5F5E58">~5s to ~1.5s on Wilco by dropping unused facet aggregations and tightening query shape.</span>
+</div>
+<div style="padding: 22px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 16px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Newsreader', Georgia, serif; font-size: 40px; line-height: 1; color: #2F5D50">0</span>
+<span style="font-weight: 500">Rollbacks at go-live</span>
+<span style="font-size: 14px; color: #5F5E58">Wrote the 40+ item readiness checklist (cutover, rollback, data validation, smoke tests) the team launched on.</span>
+</div>
+<div style="padding: 22px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 16px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Newsreader', Georgia, serif; font-size: 40px; line-height: 1; color: #2F5D50">~25%</span>
+<span style="font-weight: 500">Fewer order-status tickets</span>
+<span style="font-size: 14px; color: #5F5E58">Transactional email integration for Fleet Farm covering 100% of online orders.</span>
+</div>
+<div style="padding: 22px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 16px; display: flex; flex-direction: column; gap: 6px">
+<span style="font-family: 'Newsreader', Georgia, serif; font-size: 40px; line-height: 1; color: #2F5D50">15 min</span>
+<span style="font-weight: 500">P1 acknowledgment SLA</span>
+<span style="font-size: 14px; color: #5F5E58">Daily on-call for storefronts and in-store kiosks, resolving incidents within agreed SLAs.</span>
+</div>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 36px">
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 26px">Skillnet Solutions</h3>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">Senior Full Stack Engineer · 2023 – now</span>
+</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #3D3C38">
+<li>Own CI/CD for the platform monorepo end to end. Led the migration to a new CI provider, with automated checks and promotion across develop, staging and production.</li>
+<li>Take integrations from design to production without a dedicated ops team: NestJS/Node.js APIs, Vue/Nuxt and Angular UIs, GitLab CI/CD to AWS.</li>
+<li>Run event-driven workflows on RabbitMQ with PostgreSQL/MySQL (Aurora/RDS) and Redis, including production-safe schema changes via Knex migrations.</li>
+<li><strong style="font-weight: 500; color: #1A1A18">Wilco.</strong> Restored service in two production search outages (circuit-breaker errors, and a schema drift that broke every text filter), then added a guard that blocks unsafe schema changes. Enabled search by store item number, turning empty results into exact SKU matches.</li>
+<li><strong style="font-weight: 500; color: #1A1A18">Fleet Farm.</strong> Built order confirmation, shipping and pickup-ready emails, and integrated real-time sales tax into checkout, eliminating tax-related order corrections.</li>
+</ul>
+</article>
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 26px">Maharshi Tech Solutions</h3>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">Software Engineer · 2022</span>
+</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #3D3C38">
+<li>TypeScript/Node.js services and async pipelines with retries and fault tolerance that kept data flowing when downstream partners failed.</li>
+<li>Added structured logging and monitoring that shortened production debugging, and coached junior engineers on code quality and operability.</li>
+</ul>
+</article>
+<article style="display: flex; flex-direction: column; gap: 12px">
+<div style="display: flex; align-items: baseline; justify-content: space-between; gap: 12px; flex-wrap: wrap">
+<h3 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 500; font-size: 26px">DMI</h3>
+<span style="font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">Software Engineer · 2021</span>
+</div>
+<ul style="margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; color: #3D3C38">
+<li>Backend services and data-sync pipelines for high-volume systems, built around performance, retries and consistent error handling.</li>
+</ul>
+</article>
+</div>
+</section>
+
+<!-- WORK SHOWCASE -->
+<section class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 24px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Work</h2>
+<a href="#top" style="display: flex; flex-direction: column; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 18px; overflow: hidden">
+<div style="height: 240px; background: #E3E8E2; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #2F5D50">[CASE STUDY THUMBNAIL]</div>
+<div style="padding: 22px; display: flex; flex-direction: column; gap: 10px">
+<div style="display: flex; align-items: center; gap: 10px; font-size: 14px; color: #5F5E58">
+<div style="width: 24px; height: 24px; border-radius: 6px; background: #1A1A18; color: #F7F6F2; display: flex; align-items: center; justify-content: center; font-weight: 600; font-size: 11px">W</div>
+<span>Wilco · Senior Full Stack Engineer · 2024</span>
+</div>
+<span style="font-family: 'Newsreader', Georgia, serif; font-size: 26px; line-height: 1.2">Making kiosk search feel instant: 5s to 1.5s</span>
+<span style="color: #5F5E58">How trimming facet aggregations and reshaping OpenSearch queries took store kiosks from sluggish to snappy, and the schema guard that kept it that way.</span>
+<span style="display: inline-flex; align-items: center; gap: 6px; font-weight: 500; color: #2F5D50">Read case study
+<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M13 6l6 6-6 6"></path></svg></span>
+</div>
+</a>
+</section>
+
+<!-- BUILDS -->
+<section id="builds" class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 24px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Builds</h2>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #E6E4DD">
+<a href="https://bridgeflow.app" style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E6E4DD">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 500">Bridgeflow</span>
+<span style="font-size: 14px; color: #5F5E58">Visual drag-and-drop platform for migrating products, orders and customers between commerce platforms.</span>
+</div>
+<span style="flex-shrink: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">Next.js · TS ↗</span>
+</a>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E6E4DD">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 500">Personal Assistant Agent</span>
+<span style="font-size: 14px; color: #5F5E58">Tool use, memory and RAG over notes and docs with Pinecone and pgvector.</span>
+</div>
+<span style="flex-shrink: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">LangGraph</span>
+</div>
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; padding: 18px 0; border-bottom: 1px solid #E6E4DD">
+<div style="display: flex; flex-direction: column; gap: 4px">
+<span style="font-weight: 500">Calling &amp; SRE Ops Agents</span>
+<span style="font-size: 14px; color: #5F5E58">Real-time voice and ops agents with streaming responses, tool use and automatic recovery when upstream calls fail.</span>
+</div>
+<span style="flex-shrink: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">SSE · WebSockets</span>
+</div>
+</div>
+</section>
+
+<!-- WRITINGS -->
+<section id="writings" class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 24px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Writings</h2>
+<div style="display: flex; flex-direction: column; border-top: 1px solid #E6E4DD">
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #E6E4DD">
+<span>[POST TITLE, e.g. The schema drift that broke every filter]</span>
+<span style="flex-shrink: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[DATE]</span>
+</div>
+<div style="display: flex; justify-content: space-between; gap: 16px; padding: 16px 0; border-bottom: 1px solid #E6E4DD">
+<span>[POST TITLE]</span>
+<span style="flex-shrink: 0; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[DATE]</span>
+</div>
+</div>
+</section>
+
+<!-- TALKS -->
+<section id="talks" class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 24px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Talks</h2>
+<div class="g2">
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 14px">
+<div style="height: 130px; border-radius: 8px; background: #EDEBE5; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[SLIDE COVER]</div>
+<span style="font-weight: 500">[TALK TITLE]</span>
+<span style="font-size: 13px; color: #5F5E58">[EVENT · YEAR]</span>
+</div>
+<div style="display: flex; flex-direction: column; gap: 10px; padding: 14px; background: #FFFFFF; border: 1px solid #E6E4DD; border-radius: 14px">
+<div style="height: 130px; border-radius: 8px; background: #EDEBE5; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[SLIDE COVER]</div>
+<span style="font-weight: 500">[TALK TITLE]</span>
+<span style="font-size: 13px; color: #5F5E58">[EVENT · YEAR]</span>
+</div>
+</div>
+</section>
+
+<!-- STACK -->
+<section class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 20px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Stack</h2>
+<div style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px">
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">TypeScript</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Python</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Node.js / NestJS</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Next.js / React</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Vue / Nuxt</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Angular</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">GraphQL</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">PostgreSQL</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Redis</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">OpenSearch</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">RabbitMQ</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">AWS</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Kubernetes</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">Terraform</span>
+<span style="padding: 6px 12px; border: 1px solid #DAD8D0; border-radius: 8px; background: #FFFFFF">LLMs · RAG · Agents</span>
+</div>
+</section>
+
+<!-- BOOKSHELF -->
+<section id="bookshelf" class="wrap" style="padding-top: 24px; padding-bottom: 48px">
+<h2 style="margin: 0 0 20px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; font-weight: 500; letter-spacing: 0.08em; text-transform: uppercase; color: #5F5E58">Bookshelf</h2>
+<div style="display: flex; align-items: flex-end; gap: 6px; height: 150px; padding: 0 12px; border-bottom: 3px solid #1A1A18">
+<div style="width: 30px; height: 130px; border-radius: 3px 3px 0 0; background: #2F5D50"></div>
+<div style="width: 24px; height: 112px; border-radius: 3px 3px 0 0; background: #C9B48A"></div>
+<div style="width: 34px; height: 140px; border-radius: 3px 3px 0 0; background: #1A1A18"></div>
+<div style="width: 26px; height: 120px; border-radius: 3px 3px 0 0; background: #9A4A1F"></div>
+<div style="width: 30px; height: 104px; border-radius: 3px 3px 0 0; background: #1F4E8C"></div>
+<span style="margin-left: 16px; align-self: center; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[ADD 5 BOOKS YOU'D RECOMMEND]</span>
+</div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="wrap" style="padding-top: 56px; padding-bottom: 48px">
+<div class="cta" style="position: relative; overflow: hidden; padding: 36px 32px; border-radius: 20px; background: #E3E8E2; display: flex; align-items: center; gap: 24px">
+<div class="sprite" style="flex-shrink: 0; width: 96px; height: 120px; background-position: 0% 100%" role="img" aria-label="Tanishq waving"></div>
+<div style="display: flex; flex-direction: column; align-items: flex-start; gap: 12px; padding-right: 60px">
+<h2 style="margin: 0; font-family: 'Newsreader', Georgia, serif; font-weight: 400; font-size: 32px; line-height: 1.15">Got an integration that keeps breaking at 2am?</h2>
+<p style="margin: 0; color: #3D3C38">Open to full-time roles in Dublin and remote work that overlaps with EU or MENA hours.</p>
+<a href="mailto:sxtanishq@gmail.com" style="display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; border-radius: 999px; background: #1A1A18; color: #F7F6F2; font-weight: 500">sxtanishq@gmail.com</a>
+</div>
+<div class="peek sprite" style="position: absolute; right: -22px; bottom: 0; width: 80px; height: 100px; background-position: 60% 100%" aria-hidden="true"></div>
+</div>
+<div style="margin-top: 28px; height: 120px; border-radius: 16px; border: 1px dashed #C9C7BF; display: flex; align-items: center; justify-content: center; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 12px; color: #5F5E58">[FOOTER ARTWORK: A PLACE THAT FEELS LIKE YOURS]</div>
+<div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin-top: 24px; font-family: 'Geist Mono', ui-monospace, monospace; font-size: 13px; color: #5F5E58">
+<span>© 2026 Tanishq Sharma</span>
+<span>Built minimal, on purpose.</span>
+</div>
+</footer>
+
+</div>
+<script>
+// Sprite sheet: 6x6 grid, cell [row, col] -> background-position (col*20)% (row*20)%
+const faces=[[0,0],[1,1],[1,5],[2,0],[3,3],[5,1],[5,2],[1,4],[4,1],[3,5],[2,2],[4,5]];
+const WAVE=[5,0], BLINK=[5,4];
+let face=0, hover=false;
+const el=document.getElementById('face'), btn=document.getElementById('avatar');
+const pos=rc=>(rc[1]*20)+'% '+(rc[0]*20)+'%';
+function paint(blink){let c=faces[face]; if(hover&&face===0)c=WAVE; if(blink&&!hover&&face===0)c=BLINK; el.style.backgroundPosition=pos(c);}
+btn.addEventListener('click',()=>{face=(face+1)%faces.length;paint();});
+btn.addEventListener('mouseenter',()=>{hover=true;paint();});
+btn.addEventListener('mouseleave',()=>{hover=false;paint();});
+setInterval(()=>{paint(true);setTimeout(()=>paint(false),160);},4200);
+// Contributions placeholder grid + year tabs
+const grid=document.getElementById('grid');
+for(let i=0;i<371;i++){const s=document.createElement('span');s.style.cssText='width:9px;height:9px;border-radius:2px;background:#EDEBE5';grid.appendChild(s);}
+const yrs=document.getElementById('years'); let year=2026;
+function tabs(){yrs.innerHTML='';[2026,2025,2024,2023,2022,2021].forEach(y=>{const b=document.createElement('button');b.type='button';b.textContent=y;const on=y===year;b.style.cssText='min-height:32px;padding:0 10px;border-radius:8px;font:inherit;cursor:pointer;border:1px solid '+(on?'#1A1A18':'#DAD8D0')+';background:'+(on?'#1A1A18':'#FFFFFF')+';color:'+(on?'#F7F6F2':'#5F5E58');b.onclick=()=>{year=y;document.getElementById('yr').textContent=y;tabs();};yrs.appendChild(b);});}
+tabs();
+</script>
+</body>
+</html>

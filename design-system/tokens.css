@@ -1,0 +1,24 @@
+:root {
+  --font-heading: Satoshi;
+  --font-body: Satoshi;
+  --space-1: 0.65px;
+  --space-2: 1px;
+  --space-3: 1.3px;
+  --space-4: 3px;
+  --space-5: 4px;
+  --space-6: 5px;
+  --space-7: 6px;
+  --space-8: 7px;
+  --space-9: 8px;
+  --space-10: 9px;
+  --space-11: 10px;
+  --space-12: 11px;
+  --space-13: 12px;
+  --space-14: 13px;
+  --space-15: 14px;
+  --space-16: 16px;
+  --space-17: 20px;
+  --space-18: 24px;
+  --space-19: 28px;
+  --space-20: 56px;
+}

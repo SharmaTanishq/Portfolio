@@ -1,0 +1,76 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-bg: #f7f6f2;
+  --color-surface: #ffffff;
+  --color-ink: #1a1a18;
+  --color-ink-2: #3d3c38;
+  --color-muted: #5f5e58;
+  --color-line: #e6e4dd;
+  --color-chip: #dad8d0;
+  --color-dash: #c9c7bf;
+  --color-accent: #2f5d50;
+  --color-accent-tint: #e3e8e2;
+  --color-well: #edebe5;
+
+  --font-sans: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
+  --font-mono: var(--font-geist-mono), ui-monospace, monospace;
+}
+
+@utility wrap {
+  width: 100%;
+  max-width: 720px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+@utility label {
+  font-family: var(--font-mono);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--color-muted);
+}
+
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+/* Sprite sheet: 6x6 grid. Pick a cell with background-position (col*20)% (row*20)%. */
+@utility sprite {
+  background-image: url("/sprites/tanishq-sprites.webp");
+  background-size: 600% 600%;
+  background-repeat: no-repeat;
+}
+
+html {
+  scroll-padding-top: 80px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background: var(--color-bg);
+  color: var(--color-ink);
+  font-family: var(--font-sans);
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+::selection {
+  background: var(--color-accent-tint);
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
