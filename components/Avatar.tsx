@@ -1,7 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
-import { FRAMES, framePosition, type Frame } from "./sprite"
+import { FRAMES, HERO_AVATAR_ID, framePosition, type Frame } from "./sprite"
 
 const FACES: Frame[] = [
   [0, 0], [1, 1], [1, 5], [2, 0], [3, 3], [5, 1],
@@ -36,6 +36,7 @@ export function Avatar() {
 
   return (
     <button
+      id={HERO_AVATAR_ID}
       type="button"
       aria-label="Tap to change Tanishq's expression"
       title="Tap me"

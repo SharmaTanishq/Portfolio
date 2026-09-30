@@ -10,3 +10,6 @@ export const FRAMES = {
 export function framePosition([row, col]: Frame) {
   return `${col * 20}% ${row * 20}%`
 }
+
+// The nav swaps its wordmark for the sprite once this element scrolls out of view.
+export const HERO_AVATAR_ID = "hero-avatar"

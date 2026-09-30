@@ -1,6 +1,7 @@
 "use client"
 
 import { useEffect, useState } from "react"
+import { FRAMES, HERO_AVATAR_ID, framePosition } from "./sprite"
 import { nav, site } from "@/content/site"
 
 // A section is active while it crosses a line 35% down the viewport.
@@ -46,14 +47,47 @@ function useActiveSection(ids: string[]) {
 
 const ids = nav.map((n) => n.id)
 
+// True once the hero avatar has scrolled under the sticky nav.
+function useHeroAvatarHidden() {
+  const [hidden, setHidden] = useState(false)
+
+  useEffect(() => {
+    const avatar = document.getElementById(HERO_AVATAR_ID)
+    if (!avatar) return
+    const observer = new IntersectionObserver(([entry]) => setHidden(!entry.isIntersecting), {
+      rootMargin: "-64px 0px 0px 0px",
+    })
+    observer.observe(avatar)
+    return () => observer.disconnect()
+  }, [])
+
+  return hidden
+}
+
 export function Nav() {
   const active = useActiveSection(ids)
+  const showSprite = useHeroAvatarHidden()
 
   return (
     <header className="sticky top-0 z-10 border-b border-line bg-bg/92 backdrop-blur-md">
       <nav aria-label="Main" className="wrap flex h-16 items-center justify-between">
-        <a href="#top" className="text-[22px] font-medium italic tracking-tight hover:text-accent" aria-label="Back to top">
-          ts.
+        {/* The wordmark hands over to the avatar once the hero one is out of view. */}
+        <a href="#top" className="relative block h-[45px] w-[36px] hover:text-accent" aria-label="Back to top">
+          <span
+            aria-hidden="true"
+            className={`absolute inset-0 flex items-center text-[22px] font-medium italic tracking-tight motion-safe:transition-[opacity,translate] motion-safe:duration-300 ${
+              showSprite ? "-translate-y-2 opacity-0" : "opacity-100"
+            }`}
+          >
+            ts.
+          </span>
+          <span
+            aria-hidden="true"
+            className={`sprite absolute inset-0 motion-safe:transition-[opacity,translate] motion-safe:duration-300 ${
+              showSprite ? "opacity-100" : "translate-y-2 opacity-0"
+            }`}
+            style={{ backgroundPosition: framePosition(FRAMES.default) }}
+          />
         </a>
         <ul className="hidden gap-[22px] text-sm sm:flex">
           {nav.map((item) => {
