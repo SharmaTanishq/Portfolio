@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from "next"
 import localFont from "next/font/local"
 import { Geist_Mono } from "next/font/google"
 import { preload } from "react-dom"
+import { Analytics } from "@vercel/analytics/next"
 import { JsonLd } from "@/components/JsonLd"
 import { site, socials } from "@/content/site"
 import { siteUrl } from "@/lib/site-url"
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body>
         <JsonLd />
         {children}
+        <Analytics />
       </body>
     </html>
   )
