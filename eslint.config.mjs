@@ -12,6 +12,8 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
+    // Vendored from the beui shadcn registry; kept as published.
+    "components/motion/**",
   ]),
 ]);
 

@@ -21,12 +21,14 @@ export const nav = [
   { id: "bookshelf", label: "Bookshelf" },
 ]
 
-export const socials = [
-  { label: "GitHub", href: "https://github.com/SharmaTanishq", icon: "github" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/tanishqxsharma", icon: "linkedin" },
-  { label: "Bridgeflow", href: "https://bridgeflow.app", icon: "bridge" },
-  { label: "Email", href: "mailto:sxtanishq@gmail.com", icon: "mail" },
-] as const
+// `hint` is the tooltip. An entry with no `href` is a placeholder and renders as a plain pill.
+export const socials: { label: string; href: string | null; hint: string; icon: string }[] = [
+  { label: "GitHub", href: "https://github.com/SharmaTanishq", hint: "github.com/SharmaTanishq", icon: "github" },
+  { label: "X", href: null, hint: "[X HANDLE]", icon: "x" },
+  { label: "LinkedIn", href: "https://linkedin.com/in/tanishqxsharma", hint: "linkedin.com/in/tanishqxsharma", icon: "linkedin" },
+  { label: "Bridgeflow", href: "https://bridgeflow.app", hint: "bridgeflow.app", icon: "bridge" },
+  { label: "Email", href: "mailto:sxtanishq@gmail.com", hint: "sxtanishq@gmail.com", icon: "mail" },
+]
 
 export const footer = {
   heading: "Got an integration that keeps breaking at 2am?",

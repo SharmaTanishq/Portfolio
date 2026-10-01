@@ -1,6 +1,18 @@
-import { impact, roles } from "@/content/experience"
+import { Timeline, type TimelineRow } from "@/components/Timeline"
+import { employment, impact } from "@/content/experience"
+import { formatTenure } from "@/lib/tenure"
 
 export function Experiences() {
+  // Tenure is worked out on the server so it reflects the build date and the client never recomputes it.
+  const rows: TimelineRow[] = employment.map((job) => ({
+    id: job.name,
+    name: job.name,
+    role: job.role,
+    logo: job.logo,
+    points: job.points,
+    tenure: formatTenure(job.start, job.end),
+  }))
+
   return (
     <section id="experience" aria-labelledby="experience-heading" className="wrap pt-6 pb-12">
       <h2 id="experience-heading" className="label mb-6">
@@ -17,23 +29,7 @@ export function Experiences() {
         ))}
       </ul>
 
-      <div className="flex flex-col gap-9">
-        {roles.map((role) => (
-          <article key={role.company} className="flex flex-col gap-3">
-            <div className="flex flex-wrap items-baseline justify-between gap-3">
-              <h3 className="text-[26px] leading-tight font-medium tracking-[-0.02em]">{role.company}</h3>
-              <span className="font-mono text-[13px] text-muted">{role.meta}</span>
-            </div>
-            <ul className="flex list-disc flex-col gap-2 pl-5 text-ink-2">
-              {role.points.map((p) => (
-                <li key={p.text}>
-                  {p.lead && <strong className="font-medium text-ink">{p.lead}</strong>} {p.text}
-                </li>
-              ))}
-            </ul>
-          </article>
-        ))}
-      </div>
+      <Timeline rows={rows} defaultOpen={rows[0]?.id} />
     </section>
   )
 }

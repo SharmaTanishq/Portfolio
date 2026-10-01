@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react"
 import { FRAMES, HERO_AVATAR_ID, framePosition } from "./sprite"
 import { nav, site } from "@/content/site"
+import { Tooltip } from "@/components/motion/tooltip"
 
 // A section is active while it crosses a line 35% down the viewport.
 // At the very bottom of the page, the last section wins, since it may never reach the line.
@@ -107,12 +108,14 @@ export function Nav() {
             )
           })}
         </ul>
-        <a
-          href={`mailto:${site.email}`}
-          className="inline-flex min-h-10 items-center rounded-full bg-ink px-4 text-sm font-medium text-bg transition-colors hover:bg-accent"
-        >
-          Work with me
-        </a>
+        <Tooltip content={site.email} side="bottom">
+          <a
+            href={`mailto:${site.email}`}
+            className="inline-flex min-h-10 items-center rounded-full bg-ink px-4 text-sm font-medium text-bg transition-colors hover:bg-accent"
+          >
+            Work with me
+          </a>
+        </Tooltip>
       </nav>
     </header>
   )

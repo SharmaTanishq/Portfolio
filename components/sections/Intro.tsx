@@ -1,4 +1,6 @@
-import { Icon } from "@/components/Icon"
+import { BrandIcon, isBrand } from "@/components/BrandIcon"
+import { Icon, type IconName } from "@/components/Icon"
+import { Tooltip } from "@/components/motion/tooltip"
 import { interests } from "@/content/interests"
 import { socials } from "@/content/site"
 
@@ -16,22 +18,43 @@ export function Interests() {
   )
 }
 
+const pill =
+  "inline-flex h-10 items-center gap-2 rounded-full border border-chip bg-surface px-4 font-medium transition-colors"
+
 export function Socials() {
   return (
     <section aria-label="Elsewhere" className="wrap pb-14">
       <ul className="flex flex-wrap gap-2.5 text-sm">
-        {socials.map((s) => (
-          <li key={s.label}>
-            <a
-              href={s.href}
-              {...(s.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
-              className="inline-flex min-h-11 items-center gap-2 rounded-full border border-chip bg-surface px-4 transition-colors hover:border-accent hover:text-accent"
-            >
-              <Icon name={s.icon} />
-              {s.label}
-            </a>
-          </li>
-        ))}
+        {socials.map((s) => {
+          const icon = isBrand(s.icon) ? (
+            <BrandIcon name={s.icon} />
+          ) : (
+            <span className="text-accent">
+              <Icon name={s.icon as IconName} size={15} />
+            </span>
+          )
+          return (
+            <li key={s.label}>
+              <Tooltip content={s.hint}>
+                {s.href ? (
+                  <a
+                    href={s.href}
+                    {...(s.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
+                    className={`${pill} hover:border-accent`}
+                  >
+                    {icon}
+                    {s.label}
+                  </a>
+                ) : (
+                  <span tabIndex={0} className={`${pill} border-dashed text-muted`}>
+                    {icon}
+                    {s.label}
+                  </span>
+                )}
+              </Tooltip>
+            </li>
+          )
+        })}
       </ul>
     </section>
   )

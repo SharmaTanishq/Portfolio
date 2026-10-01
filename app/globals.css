@@ -13,6 +13,20 @@
   --color-accent-tint: #e3e8e2;
   --color-well: #edebe5;
 
+  /* Contribution heatmap: levels 1-4 of the accent green (level 0 is --color-well). */
+  --color-heat-1: #c3d2ca;
+  --color-heat-2: #8dab9e;
+  --color-heat-3: #5a8475;
+  --color-heat-4: #2f5d50;
+
+  /* Aliases for the shadcn/beui components in components/motion. */
+  --color-background: #ffffff;
+  --color-foreground: #1a1a18;
+  --color-card: #ffffff;
+  --color-card-foreground: #1a1a18;
+  --color-muted-foreground: #5f5e58;
+  --color-border: #e6e4dd;
+
   --font-sans: var(--font-satoshi), ui-sans-serif, system-ui, sans-serif;
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
