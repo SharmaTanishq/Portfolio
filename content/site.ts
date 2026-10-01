@@ -30,10 +30,11 @@ export const site = {
   contributionsFrom: 2021,
 }
 
+// Writings and Talks stay off the nav until those sections are back on the page.
 export const nav = [
-  { id: "writings", label: "Writings" },
+  // { id: "writings", label: "Writings" },
   { id: "builds", label: "Builds" },
-  { id: "talks", label: "Talks" },
+  // { id: "talks", label: "Talks" },
   { id: "experience", label: "Experiences" },
   { id: "bookshelf", label: "Bookshelf" },
 ]
@@ -51,7 +52,7 @@ export const footer = {
   heading: "Got an integration that keeps breaking at 2am?",
   body: "Open to full-time roles in Dublin and remote work that overlaps with EU or MENA hours.",
   artwork: {
-    src: "/desktop_setup.png",
+    src: "/desktop_setup.webp",
     width: 2172,
     height: 724,
     alt: "Watercolour of the desk: an ultrawide monitor full of code, a mechanical keyboard, a tablet and a pegboard under purple light.",
