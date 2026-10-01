@@ -24,7 +24,7 @@ export function Work() {
         <h3 className="text-[26px] leading-[1.2] font-medium tracking-[-0.02em]">{caseStudy.title}</h3>
         <p className="text-muted">{caseStudy.summary}</p>
         <span className="inline-flex items-center gap-1.5 font-medium text-accent">
-          {caseStudy.href ? "Read case study" : "[CASE STUDY LINK]"}
+          {caseStudy.href ? "Read case study" : ""}
           {caseStudy.href && <Icon name="arrow" size={14} strokeWidth={2} />}
         </span>
       </div>

@@ -13,6 +13,7 @@ export type Employer = {
 }
 
 export const employment: Employer[] = [
+ 
   {
     name: "Skillnet Solutions, USA",
     role: "Senior Full Stack Engineer",
@@ -36,6 +37,28 @@ export const employment: Employer[] = [
       {
         lead: "Fleet Farm.",
         text: "Built order confirmation, shipping and pickup-ready emails, and integrated real-time sales tax into checkout, eliminating tax-related order corrections.",
+      },
+    ],
+  },
+  {
+    name: "Stealth",
+    role: "Full Stack Engineer",
+    logo: "/logos/stealth-mark.svg",
+    start: { year: 2025, month: 10 },
+    end: { year: 2026, month: 8 },
+    points: [
+      {
+        
+        text: "Led the agent-assisted call-center flow, embedding the authenticated mms.com storefront in an agent wireframe so agents work in the customer session.",
+      },
+      {
+        text: "Shipped the storefront and agent UI in Next.js and React, with Node.js APIs for auth, session and storefront context.",
+      },
+      {
+        text: "Owned production issues across the agent shell and storefront: auth handoff, embed boundaries, API errors and session continuity.",
+      },
+      {
+        text: "Event-driven pipelines with retries and idempotency for partner and storefront traffic, plus OpenAI calls for classification and summarization.",
       },
     ],
   },
