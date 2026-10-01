@@ -5,9 +5,26 @@ export const site = {
   name: "Tanishq Sharma",
   handle: "tanishq",
   role: "Senior Full Stack Engineer",
-  title: "Tanishq Sharma · Software Engineer",
+  title: "Tanishq Sharma · Senior Full Stack Engineer",
   tagline:
     "Full stack engineer who keeps production boring. Integration-heavy by trade, curious about AI agents by habit.",
+  // Search result snippet and social card text. Google shows roughly the first 155 characters.
+  description:
+    "Tanishq Sharma is a Senior Full Stack Engineer building integrations, APIs and CI/CD with TypeScript, Node.js, NestJS, Vue and AWS. Open to roles in Dublin and remote.",
+  keywords: [
+    "Tanishq Sharma",
+    "Senior Full Stack Engineer",
+    "Full Stack Developer",
+    "TypeScript",
+    "Node.js",
+    "NestJS",
+    "Vue",
+    "Nuxt",
+    "AWS",
+    "OpenSearch",
+    "AI agents",
+    "Dublin",
+  ],
   email: "sxtanishq@gmail.com",
   githubUser: "SharmaTanishq",
   contributionsFrom: 2021,

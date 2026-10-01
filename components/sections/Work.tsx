@@ -4,9 +4,11 @@ import { caseStudy } from "@/content/work"
 export function Work() {
   const body = (
     <>
+      {/* Thumbnail hidden until there's a real case study to show.
       <div className="flex h-[200px] items-center justify-center bg-accent-tint font-mono text-[13px] text-accent sm:h-[240px]">
         {caseStudy.thumbnail}
       </div>
+      */}
       <div className="flex flex-col gap-2.5 p-[22px]">
         <div className="flex items-center gap-2.5 text-sm text-muted">
           <span
