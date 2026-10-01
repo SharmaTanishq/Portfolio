@@ -8,13 +8,17 @@ export function Hero() {
       <div className="flex flex-col items-start gap-7 sm:flex-row sm:items-center">
         <Avatar />
         <div className="flex flex-col gap-1.5">
-          <KineticText
-            text={site.handle}
-            className="text-[52px] leading-none font-medium tracking-[-0.04em] sm:text-[68px]"
-          />
-          <span className="font-mono text-sm text-muted">
-            / {site.name} / <em className="font-sans text-base">noun</em>
-          </span>
+          {/* The full name sits inside the h1 so search engines read the page as being about it. */}
+          <h1 className="flex flex-col gap-1.5">
+            <KineticText
+              as="span"
+              text={site.handle}
+              className="text-[52px] leading-none font-medium tracking-[-0.04em] sm:text-[68px]"
+            />
+            <span className="font-mono text-sm text-muted">
+              / {site.name} / <em className="font-sans text-base">noun</em>
+            </span>
+          </h1>
           <p className="mt-1.5 text-[20px] leading-[1.4] text-ink-2 italic sm:text-[22px]">{site.tagline}</p>
         </div>
       </div>
