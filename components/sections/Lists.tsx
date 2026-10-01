@@ -1,3 +1,7 @@
+import clsx from "clsx"
+
+import { StackIcon } from "@/components/StackIcon"
+import { Book } from "@/components/ui/book"
 import { bookshelf } from "@/content/bookshelf"
 import { builds } from "@/content/builds"
 import { stack } from "@/content/stack"
@@ -83,18 +87,54 @@ export function Talks() {
   )
 }
 
+// Checkerboard grid with "+" marks on interior intersections. Column counts are fixed
+// per breakpoint so each cell's shade and mark can be worked out from its index.
+const STACK_COLS = { mobile: 3, desktop: 6 }
+
+function isLast(i: number, cols: number) {
+  const lastRow = Math.ceil(stack.length / cols) - 1
+  return { col: i % cols === cols - 1, row: Math.floor(i / cols) === lastRow }
+}
+
 export function Stack() {
   return (
     <section aria-labelledby="stack-heading" className="wrap pt-6 pb-12">
       <Heading id="stack" className="mb-5">
         Stack
       </Heading>
-      <ul className="flex flex-wrap gap-2 text-sm">
-        {stack.map((s) => (
-          <li key={s} className="rounded-lg border border-chip bg-surface px-3 py-1.5">
-            {s}
-          </li>
-        ))}
+      <ul className="grid grid-cols-3 gap-px border border-line bg-line sm:grid-cols-6">
+        {stack.map((s, i) => {
+          const m = isLast(i, STACK_COLS.mobile)
+          const d = isLast(i, STACK_COLS.desktop)
+          const shadeM = i % 2 === 0
+          const shadeD = (Math.floor(i / STACK_COLS.desktop) + i) % 2 === 0
+          return (
+            <li
+              key={s.name}
+              className={clsx(
+                "group relative flex h-[92px] flex-col items-center justify-center gap-2 text-ink-2 transition-colors duration-200 hover:text-accent",
+                shadeM ? "bg-bg" : "bg-surface",
+                shadeD ? "sm:bg-bg" : "sm:bg-surface",
+              )}
+            >
+              <StackIcon name={s.icon} />
+              <span className="text-[13px] font-medium">{s.name}</span>
+              <svg
+                aria-hidden="true"
+                width="11"
+                height="11"
+                viewBox="0 0 11 11"
+                className={clsx(
+                  "absolute -right-[6px] -bottom-[6px] z-10 text-muted",
+                  m.col || m.row ? "hidden" : "block",
+                  d.col || d.row ? "sm:hidden" : "sm:block",
+                )}
+              >
+                <path d="M5.5 0v11M0 5.5h11" stroke="currentColor" strokeWidth="1" />
+              </svg>
+            </li>
+          )
+        })}
       </ul>
     </section>
   )
@@ -103,20 +143,18 @@ export function Stack() {
 export function Bookshelf() {
   return (
     <section id="bookshelf" aria-labelledby="bookshelf-heading" className="wrap pt-6 pb-12">
-      <Heading id="bookshelf" className="mb-5">
+      <Heading id="bookshelf" className="mb-8">
         Bookshelf
       </Heading>
-      <div className="flex h-[150px] items-end gap-1.5 border-b-[3px] border-ink px-3">
-        {bookshelf.spines.map((s, i) => (
-          <div
-            key={i}
-            aria-hidden="true"
-            className="shrink-0 rounded-t-[3px]"
-            style={{ width: s.width, height: s.height, background: s.color }}
-          />
+      <ul className="grid grid-cols-2 gap-x-6 gap-y-10 [--book-d:28px] [--book-w:132px] sm:grid-cols-3 sm:[--book-d:36px] sm:[--book-w:168px]">
+        {bookshelf.map((b) => (
+          <li key={b.title} className="group flex flex-col items-center text-center">
+            <Book src={b.cover} alt={`Cover of ${b.title}`} />
+            <span className="mt-5 max-w-[var(--book-w)] text-sm leading-snug font-medium text-balance">{b.title}</span>
+            <span className="mt-0.5 text-[13px] text-muted">{b.author}</span>
+          </li>
         ))}
-        <span className="ml-4 self-center font-mono text-xs text-muted">{bookshelf.placeholder}</span>
-      </div>
+      </ul>
     </section>
   )
 }

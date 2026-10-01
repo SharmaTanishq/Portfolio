@@ -1,4 +1,5 @@
 import { Avatar } from "@/components/Avatar"
+import { KineticText } from "@/components/ui/kinetic-text"
 import { site } from "@/content/site"
 
 export function Hero() {
@@ -7,7 +8,10 @@ export function Hero() {
       <div className="flex flex-col items-start gap-7 sm:flex-row sm:items-center">
         <Avatar />
         <div className="flex flex-col gap-1.5">
-          <h1 className="text-[52px] leading-none font-medium tracking-[-0.04em] sm:text-[68px]">{site.handle}</h1>
+          <KineticText
+            text={site.handle}
+            className="text-[52px] leading-none font-medium tracking-[-0.04em] sm:text-[68px]"
+          />
           <span className="font-mono text-sm text-muted">
             / {site.name} / <em className="font-sans text-base">noun</em>
           </span>

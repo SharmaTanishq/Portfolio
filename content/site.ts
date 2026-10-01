@@ -24,15 +24,20 @@ export const nav = [
 // `hint` is the tooltip. An entry with no `href` is a placeholder and renders as a plain pill.
 export const socials: { label: string; href: string | null; hint: string; icon: string }[] = [
   { label: "GitHub", href: "https://github.com/SharmaTanishq", hint: "github.com/SharmaTanishq", icon: "github" },
-  { label: "X", href: null, hint: "[X HANDLE]", icon: "x" },
+  { label: "X", href: "https://x.com/TanishqxShrma", hint: "https://x.com/TanishqxShrma", icon: "x" },
   { label: "LinkedIn", href: "https://linkedin.com/in/tanishqxsharma", hint: "linkedin.com/in/tanishqxsharma", icon: "linkedin" },
-  { label: "Bridgeflow", href: "https://bridgeflow.app", hint: "bridgeflow.app", icon: "bridge" },
+  { label: "Shortico", href: "https://shortico-three.vercel.app", hint: "shortico-three.vercel.app", icon: "reel" },
   { label: "Email", href: "mailto:sxtanishq@gmail.com", hint: "sxtanishq@gmail.com", icon: "mail" },
 ]
 
 export const footer = {
   heading: "Got an integration that keeps breaking at 2am?",
   body: "Open to full-time roles in Dublin and remote work that overlaps with EU or MENA hours.",
-  artwork: "[FOOTER ARTWORK: A PLACE THAT FEELS LIKE YOURS]",
+  artwork: {
+    src: "/desktop_setup.png",
+    width: 2172,
+    height: 724,
+    alt: "Watercolour of the desk: an ultrawide monitor full of code, a mechanical keyboard, a tablet and a pegboard under purple light.",
+  },
   signoff: "Built minimal, on purpose.",
 }

@@ -1,3 +1,5 @@
+import Image from "next/image"
+
 import { FRAMES, framePosition } from "@/components/sprite"
 import { footer, site } from "@/content/site"
 
@@ -29,8 +31,17 @@ export function Footer() {
         />
       </div>
 
-      <div className="mt-7 flex h-[120px] items-center justify-center rounded-2xl border border-dashed border-dash px-4 text-center font-mono text-xs text-muted">
-        {footer.artwork}
+      {/* Breaks out of the column. Multiply drops the paper white into the page background,
+          and the mask feathers the painting's edges so it has no visible border. */}
+      <div className="relative left-1/2 mt-8 w-[min(1000px,100vw)] -translate-x-1/2">
+        <Image
+          src={footer.artwork.src}
+          width={footer.artwork.width}
+          height={footer.artwork.height}
+          alt={footer.artwork.alt}
+          sizes="(min-width: 1000px) 1000px, 100vw"
+          className="h-auto w-full mix-blend-multiply [mask-image:radial-gradient(ellipse_at_center,black_55%,transparent_75%)]"
+        />
       </div>
 
       <div className="mt-6 flex flex-wrap justify-between gap-3 font-mono text-[13px] text-muted">

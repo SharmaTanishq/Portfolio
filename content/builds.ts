@@ -3,10 +3,10 @@
 
 export const builds = [
   {
-    name: "Bridgeflow",
-    body: "Visual drag-and-drop platform for migrating products, orders and customers between commerce platforms.",
-    tags: "Next.js · TS",
-    href: "https://bridgeflow.app",
+    name: "Shortico",
+    body: "AI content and ad engine for Indian SMB brands. Upload a catalogue once, get product-accurate reels, statics and captions in ten Indian languages, written to regional festivals.",
+    tags: "Next.js · GenAI",
+    href: "https://shortico-three.vercel.app",
   },
   {
     name: "Personal Assistant Agent",

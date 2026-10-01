@@ -9,7 +9,12 @@ const PATHS = {
       <circle cx="4" cy="4" r="2" />
     </>
   ),
-  bridge: <path d="M3 17h18M6 17V9m12 8V9M3 9c3 0 6-4 9-4s6 4 9 4" />,
+  reel: (
+    <>
+      <rect x="3" y="4" width="18" height="16" rx="2" />
+      <path d="M3 9h18M8 4l2 5M14 4l2 5M10 13v4l4-2z" />
+    </>
+  ),
   mail: (
     <>
       <rect x="3" y="5" width="18" height="14" rx="2" />

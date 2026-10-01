@@ -7,10 +7,9 @@ import "./globals.css"
 
 const satoshi = localFont({
   src: [
-    { path: "./fonts/Satoshi-Regular.woff2", weight: "400", style: "normal" },
+    // Variable upright (300-900) so KineticText can animate weight; italic is only used at 400.
+    { path: "./fonts/Satoshi-Variable.woff2", weight: "300 900", style: "normal" },
     { path: "./fonts/Satoshi-Italic.woff2", weight: "400", style: "italic" },
-    { path: "./fonts/Satoshi-Medium.woff2", weight: "500", style: "normal" },
-    { path: "./fonts/Satoshi-Bold.woff2", weight: "700", style: "normal" },
   ],
   variable: "--font-satoshi",
   display: "swap",

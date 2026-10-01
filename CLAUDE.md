@@ -37,11 +37,11 @@ The repo was cleared to start fresh. Build it from scratch with the stack below.
 2. **Hero**: avatar on the LEFT, name on the RIGHT. "tanishq" in big Newsreader, then `/ Tanishq Sharma / noun`, then the italic tagline. On mobile the avatar stacks above the name.
 3. **Employment timeline**: Skillnet (with Wilco and Fleet Farm as sub-rows), Maharshi, DMI. Tenure is shown like "Jan 2023 – Present · 3 yrs 10 mos". **Work tenure out from the current date at build time; don't hardcode it.**
 4. **Interests list** (placeholders marked `[LIKE THIS]`)
-5. **Social pills**: GitHub, LinkedIn, Bridgeflow, Email
+5. **Social pills**: GitHub, LinkedIn, Shortico, Email
 6. **Contributions**: year tabs 2021 to 2026 plus a GitHub-style heatmap. Currently an empty placeholder grid.
 7. **Experiences**: 4 impact stat cards, then role write-ups
 8. **Work**: featured case study card (Wilco kiosk search, 5s to 1.5s)
-9. **Builds**: Bridgeflow, Personal Assistant Agent, Calling & SRE Ops Agents
+9. **Builds**: Shortico, Personal Assistant Agent, Calling & SRE Ops Agents
 10. **Writings**, 11. **Talks**, 12. **Stack** chips, 13. **Bookshelf**
 14. **Footer**: CTA card with waving sprite + peeking sprite on hover, artwork slot, © line
 
@@ -76,7 +76,6 @@ The sprite is one image. Show a frame via `background-size: 600% 600%` and `back
 - Interests: song, book, offline hobby
 - Writings: post titles and dates
 - Talks: titles, events, slide covers
-- Bookshelf: 5 books
 - Case study: thumbnail image and the real year (2024 is a guess)
 - Footer artwork (the reference site ends with a watercolour; this one is open)
 
@@ -90,4 +89,4 @@ The sprite is one image. Show a frame via `background-size: 600% 600%` and `back
 - Email: sxtanishq@gmail.com
 - LinkedIn: https://linkedin.com/in/tanishqxsharma
 - GitHub: https://github.com/SharmaTanishq
-- Bridgeflow: https://bridgeflow.app
+- Shortico: https://shortico-three.vercel.app

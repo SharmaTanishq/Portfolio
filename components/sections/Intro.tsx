@@ -1,5 +1,6 @@
 import { BrandIcon, isBrand } from "@/components/BrandIcon"
 import { Icon, type IconName } from "@/components/Icon"
+import { OnRepeat } from "@/components/OnRepeat"
 import { Tooltip } from "@/components/motion/tooltip"
 import { interests } from "@/content/interests"
 import { socials } from "@/content/site"
@@ -8,6 +9,9 @@ export function Interests() {
   return (
     <section aria-label="Interests" className="wrap pt-4 pb-10">
       <ul className="flex list-disc flex-col gap-1.5 pl-5 text-ink-2">
+        <li>
+          <span className="text-muted">On repeat:</span> <OnRepeat />
+        </li>
         {interests.map((i) => (
           <li key={i.label}>
             <span className="text-muted">{i.label}:</span> {i.value}

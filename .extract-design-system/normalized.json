@@ -1,0 +1,45 @@
+{
+  "source": {
+    "url": "https://kothariji.in/",
+    "extractedAt": "2026-09-30T20:15:46.755Z",
+    "extractor": "dembrandt"
+  },
+  "colors": {
+    "palette": [],
+    "cssVariables": {}
+  },
+  "typography": {
+    "headingFont": "Satoshi",
+    "bodyFont": "Satoshi"
+  },
+  "spacing": {
+    "scale": [
+      "0.65px",
+      "1px",
+      "1.3px",
+      "3px",
+      "4px",
+      "5px",
+      "6px",
+      "7px",
+      "8px",
+      "9px",
+      "10px",
+      "11px",
+      "12px",
+      "13px",
+      "14px",
+      "16px",
+      "20px",
+      "24px",
+      "28px",
+      "56px"
+    ]
+  },
+  "radius": {
+    "scale": []
+  },
+  "shadows": {
+    "scale": []
+  }
+}

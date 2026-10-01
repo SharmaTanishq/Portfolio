@@ -30,8 +30,8 @@ export default async function Home() {
         <Experiences />
         <Work />
         <Builds />
-        <Writings />
-        <Talks />
+        {/* <Writings /> */}
+        {/* <Talks /> */}
         <Stack />
         <Bookshelf />
       </main>

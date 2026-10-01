@@ -1,13 +1,8 @@
-// Spines are decorative until real books are added.
-// Facts come from design-handoff/resumes/*.pdf. Anything in [SQUARE BRACKETS] is a placeholder waiting on Tanishq.
+// Books, in display order. Covers live in public/books/.
 
-export const bookshelf = {
-  placeholder: "[ADD 5 BOOKS YOU'D RECOMMEND]",
-  spines: [
-    { width: 30, height: 130, color: "#2F5D50" },
-    { width: 24, height: 112, color: "#C9B48A" },
-    { width: 34, height: 140, color: "#1A1A18" },
-    { width: 26, height: 120, color: "#9A4A1F" },
-    { width: 30, height: 104, color: "#1F4E8C" },
-  ],
-}
+export const bookshelf = [
+  { title: "Atomic Habits", author: "James Clear", cover: "/books/atomic-habits.jpg" },
+  { title: "Rich Dad Poor Dad", author: "Robert T. Kiyosaki", cover: "/books/rich-dad-poor-dad.jpg" },
+  { title: "The Mountain Is You", author: "Brianna Wiest", cover: "/books/the-mountain-is-you.jpg" },
+  { title: "The Subtle Art of Not Giving a F*ck", author: "Mark Manson", cover: "/books/subtle-art.jpg" },
+]
