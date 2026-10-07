@@ -28,6 +28,11 @@ export const site = {
   email: "sxtanishq@gmail.com",
   githubUser: "SharmaTanishq",
   contributionsFrom: 2021,
+  // Work activity on Skillnet's GitLab. The host and token stay in GITLAB_URL / GITLAB_TOKEN.
+  gitlab: {
+    label: "GitLab",
+    place: "Skillnet",
+  },
 }
 
 // Writings and Talks stay off the nav until those sections are back on the page.
@@ -39,13 +44,38 @@ export const nav = [
   { id: "bookshelf", label: "Bookshelf" },
 ]
 
-// `hint` is the tooltip. An entry with no `href` is a placeholder and renders as a plain pill.
-export const socials: { label: string; href: string | null; hint: string; icon: string }[] = [
+// `hint` is the line under a preview, or the tooltip when there is no page to shoot.
+// An entry with no `href` is a placeholder and renders as a plain pill.
+export const socials: {
+  label: string
+  href: string | null
+  hint: string
+  icon: string
+  newTab?: boolean
+  /**
+   * Hover card for http links. Omitted: a live shot of the page. A path in public/: that image.
+   * false: caption only, for pages that show scrapers a login wall (LinkedIn does).
+   */
+  preview?: string | false
+}[] = [
   { label: "GitHub", href: "https://github.com/SharmaTanishq", hint: "github.com/SharmaTanishq", icon: "github" },
-  { label: "X", href: "https://x.com/TanishqxShrma", hint: "https://x.com/TanishqxShrma", icon: "x" },
-  { label: "LinkedIn", href: "https://linkedin.com/in/tanishqxsharma", hint: "linkedin.com/in/tanishqxsharma", icon: "linkedin" },
+  { label: "X", href: "https://x.com/TanishqxShrma", hint: "x.com/TanishqxShrma", icon: "x" },
+  {
+    label: "LinkedIn",
+    href: "https://linkedin.com/in/tanishqxsharma",
+    hint: "linkedin.com/in/tanishqxsharma",
+    icon: "linkedin",
+    preview: "/previews/linkedin.webp",
+  },
   { label: "Shortico", href: "https://shortico-three.vercel.app", hint: "shortico-three.vercel.app", icon: "reel" },
-  { label: "Email", href: "mailto:sxtanishq@gmail.com", hint: "sxtanishq@gmail.com", icon: "mail" },
+  { label: "Email", href: `mailto:${site.email}`, hint: site.email, icon: "mail" },
+  {
+    label: "Resume",
+    href: "/resume",
+    hint: "Tanishq Sharma, Product Engineer",
+    icon: "resume",
+    newTab: true,
+  },
 ]
 
 export const footer = {

@@ -26,6 +26,8 @@ export interface GitHubActivityGridProps {
   maxCount?: number
   /** Words after "N contributions", e.g. "in 2026". */
   caption?: React.ReactNode
+  /** Named in the grid's accessible label, e.g. "GitHub" or "GitLab". */
+  source?: string
   /** Shown over a blank grid in place of the total and legend (e.g. while data is missing). */
   placeholder?: React.ReactNode
   /** Largest cell size in px. Cells shrink to fit the card, down to `minCellSize`. */
@@ -49,6 +51,7 @@ export function GitHubActivityGrid({
   days,
   maxCount,
   caption,
+  source = "GitHub",
   placeholder,
   cellSize = 10,
   minCellSize = 8,
@@ -181,7 +184,9 @@ export function GitHubActivityGrid({
       <div ref={viewportRef} className="no-scrollbar overflow-x-auto pb-1">
         <div
           role="img"
-          aria-label={placeholder ? "Contribution grid, no data yet" : `${total} GitHub contributions${caption ? ` ${caption}` : ""}`}
+          aria-label={
+            placeholder ? "Contribution grid, no data yet" : `${total} ${source} contributions${caption ? ` ${caption}` : ""}`
+          }
           className="flex w-max flex-col"
         >
           <div

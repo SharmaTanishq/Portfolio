@@ -2,6 +2,7 @@ import { BrandIcon, isBrand } from "@/components/BrandIcon"
 import { Icon, type IconName } from "@/components/Icon"
 import { OnRepeat } from "@/components/OnRepeat"
 import { Tooltip } from "@/components/motion/tooltip"
+import { LinkPreview } from "@/components/ui/link-preview"
 import { interests } from "@/content/interests"
 import { socials } from "@/content/site"
 
@@ -9,14 +10,16 @@ export function Interests() {
   return (
     <section aria-label="Interests" className="wrap pt-4 pb-10">
       <ul className="flex list-disc flex-col gap-1.5 pl-5 text-ink-2">
-        <li>
-          <span className="text-muted">On repeat:</span> <OnRepeat />
-        </li>
+       
         {interests.map((i) => (
           <li key={i.label}>
             <span className="text-muted">{i.label}:</span> {i.value}
           </li>
+          
         ))}
+         <li>
+          <span className="text-muted">On repeat:</span> <OnRepeat />
+        </li>
       </ul>
     </section>
   )
@@ -37,14 +40,37 @@ export function Socials() {
               <Icon name={s.icon as IconName} size={15} />
             </span>
           )
+          const classes = `${pill} hover:border-accent`
+          // Pages get a shot of the destination. A mailto has nothing to shoot, so it keeps the address tooltip.
+          if (s.href?.startsWith("http")) {
+            return (
+              <li key={s.label}>
+                <LinkPreview
+                  url={s.href}
+                  caption={s.hint}
+                  className={classes}
+                  {...(typeof s.preview === "string"
+                    ? { isStatic: true as const, imageSrc: s.preview }
+                    : { screenshot: s.preview !== false })}
+                >
+                  {icon}
+                  {s.label}
+                </LinkPreview>
+              </li>
+            )
+          }
           return (
             <li key={s.label}>
               <Tooltip content={s.hint}>
                 {s.href ? (
                   <a
                     href={s.href}
-                    {...(s.href.startsWith("http") && { target: "_blank", rel: "noopener noreferrer" })}
-                    className={`${pill} hover:border-accent`}
+                    {...(s.newTab && {
+                      target: "_blank",
+                      rel: "noopener noreferrer",
+                      "aria-label": `${s.label}, opens in a new tab`,
+                    })}
+                    className={classes}
                   >
                     {icon}
                     {s.label}

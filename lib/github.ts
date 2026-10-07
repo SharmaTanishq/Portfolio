@@ -1,5 +1,6 @@
-export type ContributionDay = { date: string; count: number; level: 0 | 1 | 2 | 3 | 4 }
-export type ContributionYear = { year: number; total: number; days: ContributionDay[] }
+import type { ContributionDay, ContributionYear } from "@/lib/contributions"
+
+export type { ContributionDay, ContributionYear }
 
 const LEVELS: Record<string, ContributionDay["level"]> = {
   NONE: 0,

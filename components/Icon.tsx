@@ -21,6 +21,12 @@ const PATHS = {
       <path d="m3 7 9 6 9-6" />
     </>
   ),
+  resume: (
+    <>
+      <path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8Z" />
+      <path d="M14 3v5h5M8 13h8M8 17h5" />
+    </>
+  ),
   arrow: <path d="M5 12h14M13 6l6 6-6 6" />,
 }
 
