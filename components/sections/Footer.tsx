@@ -1,6 +1,7 @@
 import Image from "next/image"
 
 import { FRAMES, framePosition } from "@/components/sprite"
+import { CtaButtons } from "@/components/CtaButtons"
 import { footer, site } from "@/content/site"
 
 export function Footer() {
@@ -16,12 +17,7 @@ export function Footer() {
         <div className="flex flex-col items-start gap-3 sm:pr-[60px]">
           <h2 className="text-[28px] leading-[1.15] font-medium tracking-[-0.02em] sm:text-[32px]">{footer.heading}</h2>
           <p className="text-ink-2">{footer.body}</p>
-          <a
-            href={`mailto:${site.email}`}
-            className="inline-flex min-h-11 max-w-full items-center rounded-full bg-ink px-5 font-medium break-all text-bg transition-colors hover:bg-accent"
-          >
-            {site.email}
-          </a>
+          <CtaButtons tooltipSide="top" />
         </div>
         {/* Peeks from the right edge, leaning further in on hover. Hidden on mobile, where there is no hover. */}
         <div

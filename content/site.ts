@@ -26,6 +26,11 @@ export const site = {
     "Dublin",
   ],
   email: "tanishqsharma.work@gmail.com",
+  // Public Cal.com profile. Lists the 15 min and 30 min events.
+  cal: {
+    link: "tanishq-sharma-udbv0j",
+    namespace: "book",
+  },
   githubUser: "SharmaTanishq",
   contributionsFrom: 2021,
   // Work activity on Skillnet's GitLab. The host and token stay in GITLAB_URL / GITLAB_TOKEN.

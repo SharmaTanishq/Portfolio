@@ -3,6 +3,7 @@ import localFont from "next/font/local"
 import { Geist_Mono } from "next/font/google"
 import { preload } from "react-dom"
 import { Analytics } from "@vercel/analytics/next"
+import { CalEmbed } from "@/components/CalEmbed"
 import { JsonLd } from "@/components/JsonLd"
 import { site, socials } from "@/content/site"
 import { siteUrl } from "@/lib/site-url"
@@ -76,6 +77,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en" className={`${satoshi.variable} ${geistMono.variable}`}>
       <body>
         <JsonLd />
+        <CalEmbed />
         {children}
         <Analytics />
       </body>
