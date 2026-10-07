@@ -25,7 +25,7 @@ export const site = {
     "AI agents",
     "Dublin",
   ],
-  email: "sxtanishq@gmail.com",
+  email: "tanishqsharma.work@gmail.com",
   githubUser: "SharmaTanishq",
   contributionsFrom: 2021,
   // Work activity on Skillnet's GitLab. The host and token stay in GITLAB_URL / GITLAB_TOKEN.
